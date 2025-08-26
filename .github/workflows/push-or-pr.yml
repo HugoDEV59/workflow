@@ -1,0 +1,24 @@
+name: Push or Pull Request
+
+on:
+  push:
+  pull_request:
+
+env:
+  PUSH_MESSAGE: "C'est un push !"
+  PR_MESSAGE: "C'est une pull request !"
+
+jobs:
+  check_push:
+    if: ${{ github.event_name == 'push' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Afficher message push
+        run: echo "$PUSH_MESSAGE"
+
+  check_pr:
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Afficher message PR
+        run: echo "$PR_MESSAGE"
