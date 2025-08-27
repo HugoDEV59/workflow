@@ -1,0 +1,38 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ Récupérer le code
+      - uses: actions/checkout@v3
+
+      # 2️⃣ Installer Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+
+      # 3️⃣ Créer le fichier source
+      - name: Create source file
+        run: |
+          mkdir -p src
+          echo "console.log('Hello from Node.js CI workflow!');" > src/index.js
+
+      # 4️⃣ Build (copie dans dist)
+      - name: Build project
+        run: |
+          mkdir -p dist
+          cp src/index.js dist/index.js
+          echo "Build completed!"
+
+      # 5️⃣ Exécuter le script
+      - name: Run script
+        run: node dist/index.js

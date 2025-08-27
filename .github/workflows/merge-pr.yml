@@ -6,8 +6,8 @@ on:
 
 jobs:
   say_pr_merged:
-    if: ${{ github.event.pull_request.merged == true }}
     runs-on: ubuntu-latest
+    if: ${{ github.event.pull_request.merged == true }}
     steps:
       - name: Message
         run: echo "Pull Request mergée !"

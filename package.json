@@ -1,0 +1,20 @@
+{
+  "name": "workflow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HugoDEV59/workflow.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HugoDEV59/workflow/issues"
+  },
+  "homepage": "https://github.com/HugoDEV59/workflow#readme"
+}
