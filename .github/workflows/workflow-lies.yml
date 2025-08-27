@@ -8,11 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Message job1
-        run: echo "Job 1 exécuté manuellement 🚀"
+        run: echo "Job 1 exécuté manuellement"
 
   job2:
     runs-on: ubuntu-latest
     needs: job1
     steps:
       - name: Message job2
-        run: echo "Job 2 exécuté après Job 1 ✅"
+        run: echo "Job 2 exécuté après Job 1"

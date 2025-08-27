@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Message
-        run: echo "Workflow Suivant exécuté après Merge PR ✅"
+        run: echo "Workflow Suivant exécuté après Merge PR"
