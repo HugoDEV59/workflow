@@ -1,0 +1,16 @@
+name: Matrix Fruits
+
+on:
+  workflow_dispatch:
+
+jobs:
+  eat_fruits:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        fruit: [pomme, banane, poire, fraise]
+        name: [Michel, Alice, Hugo]
+    steps:
+      - name: Phrase
+        run: echo "${{ matrix.name }} mange une ${{ matrix.fruit }}, et il adore ça !"
